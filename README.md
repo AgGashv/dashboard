@@ -1,5 +1,6 @@
 Информация о количестве населения Земли (1960-2022)
 =============
+Python 3.11.3
 
 Ссылка на сайт: [https://agasif.pythonanywhere.com/](https://agasif.pythonanywhere.com/)
 
