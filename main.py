@@ -1,6 +1,6 @@
 import plotly.express as px
 import dash_bootstrap_components as dbc
-from pages import graph_page
+from pages import graph_page, about_project
 from data import df
 from dash import Dash, html, dcc, Output, Input, callback
 
@@ -28,7 +28,8 @@ sidebar = html.Div(
         ),
         dbc.Nav(
             [
-                dbc.NavLink("Гистограмма", href="/", active="exact", style={'color': 'black'}),
+                dbc.NavLink("О проекте", href="/", active='exact', style={'color': 'black'}),
+                dbc.NavLink("Гистограмма", href="/hist", active="exact", style={'color': 'black'}),
                 dbc.NavLink("График", href="/graph", active="exact", style={'color': 'black'})
             ],
             vertical=True,
@@ -107,9 +108,11 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content], style={'margin
 )
 def change_page(pathname):
     if pathname == '/':
-        return layout
+        return about_project.layout
     elif pathname == '/graph':
         return graph_page.layout
+    elif pathname == '/hist':
+        return layout
 
     return html.Div(
         [
