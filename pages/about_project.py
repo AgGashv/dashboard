@@ -14,7 +14,7 @@ layout = html.Div([
         интересен и полезен для Вас!\n"""
     ),
     html.Div(["Ссылка на GitHub: ", dcc.Markdown(f"[{link}]({link})", style={'display': 'inline-block'})],
-             style={'margin-top': '40%'}),
+             style={'margin-top': '47%'}),
 
 ],
     style={"margin-left": "10px"})
